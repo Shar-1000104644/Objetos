@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Factura</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">FACTURA</h1>
+      <h1>PASO UNO:</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Ingrese datos de Empresa			</h3>
+      </div>
+      <div class="col-md-6">
+        <h3>Ingrese datos de Cliente</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Nombre:
+          <input id="nameEmp"/>
+        </p>
+        <p>Dirección:
+          <input id="addressEmp"/>
+        </p>
+        <p>Telefono:
+          <input id="phoneEmp"/>
+        </p>
+        <p>NIF:
+          <input id="nifEmp"/>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>Nombre:
+          <input id="nameCli"/>
+        </p>
+        <p>Dirección:
+          <input id="addressCli"/>
+        </p>
+        <p>Telefono:
+          <input id="phoneCli"/>
+        </p>
+        <p>DNI:
+          <input id="dniCli"/>
+        </p>
+      </div>
+    </div>
+    <button onclick="registrar()">SIGUIENTE</button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">FACTURA</h1>
+      <h1>PASO DOS:</h1>
+    </div>
+    <div class="row">
+      <h3>Ingrese los datos de su compra</h3>
+    </div>
+    <div class="row">
+      <p>Selecciona la fruta que quieres comer
+        <select id="producto">
+          <option value="0">Kiwi</option>
+          <option value="1">Manzana</option>
+          <option value="2">Mandarina</option>
+          <option value="3">Uva</option>
+          <option value="4">Fresa</option>
+        </select>
+      </p>
+      <p>Selecciona la cantidad de fruta
+        <select id="cantidad">
+          <option value="0">1 Kg.</option>
+          <option value="1">2 Kg.</option>
+          <option value="2">3 Kg.</option>
+          <option value="3">4 Kg.</option>
+          <option value="4">5 Kg.</option>
+        </select>
+      </p>
+      <p>Indica el precio
+        <input placeholder="S/."/>
+      </p>
+    </div>
+    <div class="row">
+      <caption class="text-center">Verificar tu lista de compras</caption>
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <td>FRUTA</td>
+            <td>PRECIO</td>
+            <td>CANTIDAD</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rsario</td>
+            <td>20</td>
+            <td>23445</td>
+          </tr>
+          <tr>
+            <td>jqwor</td>
+            <td>qjwfi</td>
+            <td>jfow</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button>COMPRAR</button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">FACTURA</h1>
+      <div class="col-md-6">
+        <h3>DATOS DEL PROVEEDOR</h3>
+        <h4>Nombre de Empresa</h4>
+        <h4>Dirección de Empresa</h4>
+        <h4>Teléfono de Empresa</h4>
+        <h4>NIF de Empresa</h4>
+      </div>
+      <div class="col-md-6">
+        <h3>DATOS DEL CLIENTE</h3>
+        <h4>Nombre del cliente</h4>
+        <h4>Dirección de cliente</h4>
+        <h4>Teléfono de cliente</h4>
+        <h4>NIF de cliente</h4>
+      </div>
+    </div>
+    <div class="row">
+      <h1>DETALLE</h1>
+      <caption class="text-center">Verificar tu lista de compras</caption>
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <td>FRUTA</td>
+            <td>PRECIO</td>
+            <td>CANTIDAD</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rsario</td>
+            <td>20</td>
+            <td>23445</td>
+          </tr>
+          <tr>
+            <td>jqwor</td>
+            <td>qjwfi</td>
+            <td>jfow</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <p>SUB-TOTAL</p>
+        <P>IGV</P>
+        <P>TOTAL</P>
+      </div>
+      <div class="col-md-4">
+        <P>WEF</P>
+        <P>EWT</P>
+        <P>WETR</P>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
