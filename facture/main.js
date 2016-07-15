@@ -9,12 +9,12 @@ Una vez definidas las propiedades del objeto, añadir un método que calcule
 el importe total de la factura y actualice el valor de la propiedad correspondiente.
  Por último, añadir otro método que muestre por pantalla el importe total de la factura.*/
 
-function Empresa()
+function Empresa(_nombre,_direccion,_telefono,_nif)
 {
-	this.nombre=;
-	this.direccion =;
-	this.telefono =;
-	this.nif =;
+	this.nombre=_nombre;
+	this.direccion =_direccion;
+	this.telefono =_telefono;
+	this.nif =_nif;
 }
 
 function Cliente(_nombre,_direccion,_telefono,_dni)
@@ -49,6 +49,7 @@ var direccionCli=document.getElementById('addressCli').value;
 var telefonoCli=document.getElementById('phoneCli').value;
 var dniCli=document.getElementById('dniCli').value;
 
-
-
-
+function registrarDatos(){
+	var nuevaEmpresa = new Empresa(nombreEmp,direccionEmp,telefonoEmp,nifEmp); 
+	var nuevoCliente = new Cliente(nombreCli,direccionCli,telefonoCli,dniCli); 
+};
