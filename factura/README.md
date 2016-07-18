@@ -1,2 +1,0 @@
-# Objetos
-Ejercicios - Objetos

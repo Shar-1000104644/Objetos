@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de facturas</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="paso1" id="paso1">
+		<h2>Paso 1: Datos de cliente</h2>
+		<div class="well">
+			<p>
+				<input class="form-control" type="text" id="razon" placeholder="Razón Social">
+			</p>
+			<p>
+				<input class="form-control" type="text" id="ruc" placeholder="RUC">
+			</p>
+			<p>
+				<input class="form-control" type="text" id="direccion" placeholder="Dirección">
+			</p>
+			<p>
+				<button type="submit" class="btn btn-primary" onclick="registrarCliente()">Siguiente</button>
+			</p>
+		</div>
+		</div>
+		<!-- Termina paso 1 -->
+		<div class="paso2 ocultar" id="paso2">
+
+			<h2>Paso 2: Agregar productos</h2>
+			<div class="well">
+			<p>
+				<select class="form-control" name="producto" id="producto">
+					<option value="Manzanas">Manzanas</option>
+					<option value="Platanos">Platanos</option>
+					<option value="Melón">Melón</option>
+					<option value="Sandía">Sandía</option>
+				</select>
+			</p>
+			<p>
+				<input class="form-control" type="text" id="cantidad" placeholder="Cantidad">
+			</p>
+			<p>
+				<input class="form-control" type="text" id="precio" placeholder="Precio unitario">
+			</p>
+			<p>
+				<button class="btn btn-primary" onclick="agregarProducto()">Agregar producto</button>
+			</p>
+
+			<hr>
+			<h4>Lista de productos</h4>
+			<ul class="list-group" id="product-list">
+				<li class="list-group-item list-group-item-info">No hay productos agregados</li>
+			</ul>
+
+			<p>
+				<button class="btn btn-primary" onclick="updateFactura()">Siguiente</button>
+			</p>
+		</div>
+		</div>
+
+		<!-- Termina paso 2 -->
+
+		<!-- Modelo Factura -->
+
+
+		<hr>
+		<div class="factura ocultar" id="paso3">
+			<div class="row factura-header">
+				<div class="col-md-8">
+					<h1 class="logo">Del Pozo Frutería</h1>
+				</div>
+				<div class="col-md-4">
+					<div class="well small text-center">
+						RUC: 20566776453
+						<h1 class="">FACTURA</h1>
+						Nº: 00<span>1</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="factura-client-info">
+				<p>Señores: <span id="client_rs"></span> | RUC: <span id="client_ruc"></span></p>
+				<p>Dirección: <span id="client_address"></span></p>
+			</div>
+
+			<div class="factura-description">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Cantidad</th>
+							<th>Descripción</th>
+							<th>Precio Unitario</th>
+							<th>Valor de venta</th>
+						</tr>
+					</thead>
+					<tbody id="table-products">
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="row factura-total">
+				<ul class="list-group col-md-3 pull-right">
+					<li class="list-group-item"> Sub Total: <span class="badge" id="factura_total">0</span> </li>
+					<li class="list-group-item"> IGV: <span class="badge" id="factura_igv">0</span> </li>
+					<li class="list-group-item list-group-item-info"> Total S/: <span class="badge" id="factura_precio_total">0</span> </li>
+				</ul>
+			</div>
+
+		</div><!-- End factura -->
+	</div>
+<br>
+<br>
+
+	<script src="js/main_factura.js"></script>
+</body>
+
+</html>

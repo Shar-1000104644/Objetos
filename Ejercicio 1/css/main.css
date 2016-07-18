@@ -1,0 +1,41 @@
+body, small{
+	font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4
+{
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.nombre, .monto
+{
+	width: 80px;
+}
+
+.ocultar
+{
+	display: none;
+}
+
+.logo
+{
+	height: 0;
+	overflow: hidden;
+	background: url(../img/logo.png) no-repeat;
+	background-size: contain;
+	margin: 0;
+	padding: 0;
+	padding-top: 120px;
+}
+
+.factura *
+{
+	/*outline: 1px solid rgba(255, 0, 0, 0.1);;*/
+}
+
+.factura-client-info span
+{
+	display: inline-block;
+	width: 300px;
+	border-bottom: 1px solid #999;
+}
