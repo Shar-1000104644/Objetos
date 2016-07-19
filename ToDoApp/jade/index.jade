@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title ToDoApp
+	link(rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css")
+	link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+body
+	.container
+		h1.text-center To Do App
+		.row
+			textarea#newTarea(placeholder='ingresa tu tarea aqui')
+		.row
+			button#agregar(onclick='agregarTareas()') Agregar 
+				i.fa.fa-plus
+		.row
+			.well(style="max-height: 200px;overflow:auto;")
+				ul#listaTareas.checkbox.list-group
+	script(src='js/main.js')
