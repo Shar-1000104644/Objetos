@@ -36,10 +36,6 @@ function Factura()
 	};
 }
 
-
-
-
-
 //---------- Conexión con interface
 var factura1 = new Factura();
 
